@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DigiCore Store - Cursor Demo</title>
+<link rel="stylesheet" href="cursor/cursor.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursorPt">
+    <div id="cornerWrapper">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+    </div>
+</div>
+
+<header>
+    <div class="logo">DigiCore Store</div>
+</header>
+
+<div class="floating-nav">
+    <div class="hover-target nav-button">Nav 1</div>
+    <div class="hover-target nav-button">Nav 2</div>
+    <div class="hover-target nav-button">Nav 3</div>
+    <div class="hover-target nav-button">Nav 4</div>
+</div>
+
+<main>
+    <section class="hero">
+        <h1>Welcome to The Demo</h1>
+        <p>Kursor modern dengan highlight dynamic & efek magnet interaktif.</p>
+    </section>
+
+    <div class="section-buttons">
+        <div class="hover-target">Button 1</div>
+        <div class="hover-target">Button 2</div>
+        <div class="hover-target">Button 3</div>
+        <div class="hover-target">Button 4</div>
+    </div>
+</main>
+
+<footer>
+    © 2025 DigiCore Store. All rights reserved.
+</footer>
+
+<script type="module">
+    window.addEventListener("click", () => {
+        const a = new Audio("./cursor/sfx/hover.wav");
+        a.volume = 0; 
+        a.play().catch(() => {});
+    }, { once: true });
+
+    import { initCursor } from "./cursor/cursor.js";
+    initCursor();
+</script>
+
+</body>
+</html>
